@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    transition: 200ms ease-in-out;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #124559;
+    --secondary: #598392;
+    --third: #49809e;
+    --fourth: #6ac4d5;
+    --text-dark: #212529;
+    --background-dark: #343A40;
+    --text-white: #F8F9FA;
+    --background-white: #E9ECEF;
+    --big-title: 1.7rem;
+    --title: 1.5rem;
+    --sub-title: 1.45rem;
+    --big-content: 1.4rem;
+    --content: 1.25rem;
+    --radius: 10px;
+    --font-handwriting: 'Playwrite GB S', cursive;
+    --box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: var(--text-white)
+}
+
+.body {
+    background-color: var(--background-white);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+    padding: 2vh 10%;
+    background-color: var(--background-dark);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand .logo {
+    width: 10%;
+    margin: 0 0.5vw 0 0;
+}
+
+.brand .title {
+    color: var(--text-white);
+    font-family: var(--font-handwriting);
+}
+
+.elements-container {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.elements-container .element {
+    margin: 0 0 0 1vw;
+}
+
+.elements-container .element .link {
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.elements-container .element:first-child:hover {
+    padding: 0 0 1vh 0;
+    border-bottom: 2px solid var(--text-white);
+}
+
+.elements-container .element:last-child {
+    padding: 3.5% 15%;
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.elements-container .element:last-child:hover {
+    padding: 3.5% 15%;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+}
+
+.elements-container .element .button-primary {
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.footer {
+    background-color: var(--background-dark);
+    color: var(--text-white);
+    padding: 4vh 0;
+    text-align: center;
+}
+
+.main {
+    min-height: 75vh;
+    flex: 1;
+}
+
+.cookies {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--background-dark);
+    color: var(--text-white);
+    padding: 1vh 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        width: 7.5%;
+        height: 3vh;
+        background-color: var(--primary);
+        border: 1px solid var(--primary);
+        color: var(--text-white);
+        border-radius: var(--radius);
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--secondary);
+        border: 1px solid var(--secondary);
+    }
+}
