@@ -1,7 +1,7 @@
 # Restify
 
 ## Présentation
-Restify est un outil permettant de répertorier les différents restaurants, les chaînes de restauration rapide et les bars de France.
+Restify est un outil permettant de répertorier les différents restaurants, les chaînes de restauration rapide et les bars de France. Restify est à but éducatif.
 
 ## Installation
 1. Cloner le dépôt
