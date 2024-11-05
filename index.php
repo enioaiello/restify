@@ -22,10 +22,10 @@
                     <a href="./index.php" class="link">Accueil</a>
                 </li>
                 <li class="element">
-                    <a href="./views/restaurant.php" class="link">Commander</a>
+                    <a href="views/restaurants.php" class="link">Commander</a>
                 </li>
                 <li class="element">
-                    <a href="./views/register.php" class="button-primary">Enregistrer</a>
+                    <a href="./views/register/basic-information.php" class="button-primary">Enregistrer</a>
                 </li>
             </ul>
         </nav>
@@ -33,7 +33,7 @@
     <main class="main">
         <div class="banner">
             <h2 class="title">Découvrez de nouvelles saveurs, grâce à <span class="service">Restify</span> !</h2>
-            <a href="./views/restaurant.php" class="button-primary">Commander</a>
+            <a href="views/restaurants.php" class="button-primary">Commander</a>
         </div>
         <div class="details">
             <h3 class="title">Pourquoi <span class="service">Restify</span> ?</h3>

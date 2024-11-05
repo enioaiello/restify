@@ -1,0 +1,15 @@
+CREATE TABLE `restaurants` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`name` TEXT(65535) NOT NULL,
+	`localisation` TEXT(65535) NOT NULL,
+	`opens` TIME NOT NULL,
+	`close` TIME NOT NULL,
+	`status` BOOLEAN NOT NULL,
+	`phone` TEXT(65535) NOT NULL,
+	`email` TEXT(65535) NOT NULL,
+	`website` TEXT(65535) NOT NULL,
+	`image` TEXT(65535) NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+

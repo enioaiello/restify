@@ -9,7 +9,7 @@ Restify est un outil permettant de répertorier les différents restaurants, les
 git clone https://github.com/enioaiello/restify.git
 ```
 2. Ouvrir un émulateur de serveur local (WAMP, MAMP, XAMPP, etc.)
-3. Importer la base de données `restify.sql` dans phpMyAdmin
+3. Importer la base de données `./assets/sql/restify.sql` dans phpMyAdmin
 4. Utiliser la commande PHP dans le répertoire cloné pour ouvrir un serveur local
 ```bash
 php -S localhost:8000
@@ -25,6 +25,7 @@ php -S localhost:8000
 - CSS3
 - JavaScript
 - PHP
+- SQL
 
 ## A faire
 - [x] Page d'accueil

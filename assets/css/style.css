@@ -18,6 +18,7 @@
     --background-dark: #343A40;
     --text-white: #F8F9FA;
     --background-white: #E9ECEF;
+    --error: #dc3545;
     --big-title: 1.7rem;
     --title: 1.5rem;
     --sub-title: 1.45rem;
@@ -39,9 +40,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
 }
 
 .header {
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: 2vh 10%;
     background-color: var(--background-dark);
@@ -66,6 +70,8 @@
 }
 
 .brand .title {
+    cursor: default;
+    user-select: none;
     color: var(--text-white);
     font-family: var(--font-handwriting);
 }
@@ -75,6 +81,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .elements-container .element {
@@ -86,22 +93,23 @@
     text-decoration: none;
 }
 
-.elements-container .element:first-child:hover {
+.elements-container .element:hover {
     padding: 0 0 1vh 0;
     border-bottom: 2px solid var(--text-white);
 }
 
 .elements-container .element:last-child {
-    padding: 3.5% 15%;
+    padding: 3% 10%;
     background-color: var(--primary);
     border-radius: var(--radius);
     cursor: pointer;
 }
 
 .elements-container .element:last-child:hover {
-    padding: 3.5% 15%;
+    padding: 3% 10%;
     background-color: var(--secondary);
     border-radius: var(--radius);
+    border-bottom: none;
 }
 
 .elements-container .element .button-primary {
@@ -117,7 +125,6 @@
 }
 
 .main {
-    min-height: 75vh;
     flex: 1;
 }
 
