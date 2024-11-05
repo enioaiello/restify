@@ -19,6 +19,11 @@
             echo "<link rel='stylesheet' href='../../assets/css/style.css'>";
             echo '<link rel="stylesheet" href="../../assets/css/register.css">';
         }
+        if (strpos($_SERVER['REQUEST_URI'], 'components')) {
+            echo "<link rel='stylesheet' href='../../assets/css/style.css'>";
+            echo '<link rel="stylesheet" href="../../assets/css/error.css">';
+        }
+
     ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css">
     <?php
@@ -30,7 +35,7 @@
         echo '<link rel="stylesheet" href="../assets/css/homepage.css">';
     }
 
-    if (strpos($_SERVER['REQUEST_URI'], 'register')) {
+    if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
         echo "<link rel='icon' href='../../assets/img/logo.png'>";
     } else {
         echo "<link rel='icon' href='../assets/img/logo.png'>";
@@ -42,7 +47,7 @@
     <nav class="navbar">
         <div class="brand">
             <?php
-                if (strpos($_SERVER['REQUEST_URI'], 'register')) {
+                if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
                     echo '<img src="../../assets/img/logo.png" alt="Logo Restify" class="logo">';
                 } else {
                     echo '<img src="../assets/img/logo.png" alt="Logo Restify" class="logo">';
@@ -54,7 +59,7 @@
             <li class="element">
                 <?php
                     // Si l'URL contient "register"
-                    if (strpos($_SERVER['REQUEST_URI'], 'register')) {
+                    if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
                         echo '<a href="../../index.php" class="link">Accueil</a>';
                     } else {
                         echo '<a href="../index.php" class="link">Accueil</a>';
@@ -64,7 +69,7 @@
             <li class="element">
                 <?php
                 // Si l'URL contient "register"
-                if (strpos($_SERVER['REQUEST_URI'], 'register')) {
+                if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
                     echo '<a href="../restaurants.php" class="link">Commander</a>';
                 } else {
                     echo '<a href="./restaurants.php" class="link">Commander</a>';
@@ -74,7 +79,7 @@
             <li class="element">
                 <?php
                 // Si l'URL contient "register"
-                if (strpos($_SERVER['REQUEST_URI'], 'register')) {
+                if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
                     echo '<a href="../register.php" class="button-primary">Enregistrer</a>';
                 } else {
                     echo '<a href="./register.php" class="link">Enregistrer</a>';

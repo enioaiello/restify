@@ -7,7 +7,7 @@
     <button id="close-cookies" class="button-primary">Accepter</button>
 </div>
     <?php
-        if (strpos($_SERVER['REQUEST_URI'], 'register')) {
+        if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
             echo '<script src="../../assets/js/cookies.js"></script>';
         } else {
             echo '<script src="../assets/js/cookies.js"></script>';

@@ -35,7 +35,7 @@
 
         input {
             width: 100%;
-            padding: 0.75vh;
+            padding: 1vh;
             border-radius: var(--radius);
             outline: none;
             border: 1px solid var(--text-dark);
@@ -67,6 +67,23 @@
             margin: 0.5vh 0 0 0;
             color: var(--error);
         }
+
+        .info {
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .schedules {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .form-group {
+            width: 45%;
+        }
     }
 
     .button-primary {
@@ -84,4 +101,18 @@
     .button-primary:hover {
         background-color: var(--secondary);
     }
+}
+
+.main .content {
+    padding: 2vh 0;
+    font-size: 1.2rem;
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--secondary);
 }

@@ -1,0 +1,27 @@
+.container {
+    width: 80%;
+    margin: 1vh auto;
+}
+
+.head {
+    text-align: center;
+    margin: 1vh 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1vh 0;
+}
+
+.restaurant {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span.pretty {
+    font-family: var(--font-handwriting);
+}

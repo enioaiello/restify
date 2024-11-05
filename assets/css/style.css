@@ -49,6 +49,7 @@
     width: 100%;
     padding: 2vh 10%;
     background-color: var(--background-dark);
+    z-index: 999999999999999999999999999999999999999999999999999999999;
 }
 
 .navbar {
@@ -117,15 +118,19 @@
     text-decoration: none;
 }
 
+.main {
+    flex: 1;
+}
+
+.main .pretty {
+    font-family: var(--font-handwriting);
+}
+
 .footer {
     background-color: var(--background-dark);
     color: var(--text-white);
     padding: 4vh 0;
     text-align: center;
-}
-
-.main {
-    flex: 1;
 }
 
 .cookies {
