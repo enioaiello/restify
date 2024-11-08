@@ -12,3 +12,6 @@ $connexion = mysqli_connect($host, $user, $pass, $dbname);
 if (!$connexion) {
     die("Échec de la connexion : " . mysqli_connect_error());
 }
+
+// Définition du chemin du site
+const URL = "http://localhost/restify/";

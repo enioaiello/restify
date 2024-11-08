@@ -1,18 +1,4 @@
 <?php
-//// Paramètres de connexion
-//$host = '127.0.0.1';
-//$dbname = 'restify';
-//$user = 'enio';
-//$pass = '123456789';
-//
-//// Connexion à la base de données
-//$connexion = mysqli_connect($host, $user, $pass, $dbname);
-//
-//// Vérifier la connexion
-//if (!$connexion) {
-//    die("Échec de la connexion : " . mysqli_connect_error());
-//}
-
 require '../components/config.php';
 
 $name = '';
@@ -68,13 +54,21 @@ if (isset($_POST['submit'])) {
             $category = 'brewery';
         } elseif ($category === 'fast-food') {
             $category = 'fast-food';
+        } elseif ($category === 'coffee') {
+            $category = 'coffee';
         }
+
+        // Génère un identifiant unique : si celui-ci est déjà utilisé par un autre restaurant, un autre sera choisi
+        $id = uniqid();
+
         // Requête SQL
         $sql = "INSERT INTO restaurants (name, localisation, category, opens, close) VALUES ('$name', '$address', '$category', '$opening', '$closing')";
 
         // Exécution de la requête
         if (mysqli_query($connexion, $sql)) {
-            header('Location: ./contact.php?id=' . $name);
+            // Renvoie vers contact.php en indiquant l'ID présent dans la bdd en method get
+//            header('Location: ./contact.php?id=' . $name);
+            header('Location: ./contact.php');
         } else {
             header('Location: ./error.php?erreur=' . mysqli_error($connexion));
         }
@@ -106,6 +100,7 @@ require '../components/header.php';
             <select name="category" id="category">
                 <option value="restaurant" <?php echo ($category == 'restaurant') ? 'selected' : '' ?>>Restaurant</option>
                 <option value="brewery" <?php echo ($category == 'brewery') ? 'selected' : '' ?>>Brasserie</option>
+                <option value="coffee" <?php echo ($category == 'coffee') ? 'selected' : '' ?>>Café</option>
                 <option value="fast-food" <?php echo ($category == 'fast-food') ? 'selected' : '' ?>>Fast-food</option>
             </select>
         </div>

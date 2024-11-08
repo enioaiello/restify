@@ -1,3 +1,8 @@
+<?php
+require 'config.php';
+echo URL;
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -5,86 +10,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Enregistrez votre restaurant et soyez indexés.">
     <title>Restify</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo URL . 'assets/css/style.css'; ?>">
     <?php
+
         if (strpos($_SERVER['REQUEST_URI'], 'register.php')) {
-            echo '<link rel="stylesheet" href="../assets/css/register.css">';
+            ?>
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/register.css'; ?>">
+        <?php
         } else if (strpos($_SERVER['REQUEST_URI'], 'restaurants.php')) {
-            echo '<link rel="stylesheet" href="../assets/css/restaurant.css">';
+            ?>
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/restaurant.css'; ?>">
+        <?php
         } else if (strpos($_SERVER['REQUEST_URI'], 'index.php')) {
-            echo '<link rel="stylesheet" href="../assets/css/homepage.css">';
+            ?>
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/homepage.css'; ?>">
+        <?php
+        } else if (strpos($_SERVER['REQUEST_URI'], 'success.php')) {
+            ?>
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/success.css'; ?>">
+        <?php
+        } else {
+            ?>
+            <link rel="icon" href="<?php echo URL . 'assets/img/logo.png'; ?>">
+        <?php
         }
 
-        if (strpos($_SERVER['REQUEST_URI'], 'register')) {
-            echo "<link rel='stylesheet' href='../../assets/css/style.css'>";
-            echo '<link rel="stylesheet" href="../../assets/css/register.css">';
+        if (strpos($_SERVER['REQUEST_URI'], 'restaurant')) {
+            ?>
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/style.css'; ?>">
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/register.css'; ?>">
+        <?php
         }
-        if (strpos($_SERVER['REQUEST_URI'], 'components')) {
-            echo "<link rel='stylesheet' href='../../assets/css/style.css'>";
-            echo '<link rel="stylesheet" href="../../assets/css/error.css">';
-        }
-
-    ?>
+        if (strpos($_SERVER['REQUEST_URI'], 'components')) {?>
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/error.css'; ?>">
+            <link rel="stylesheet" href="<?php echo URL . 'assets/css/'; ?>">
+        <?php } ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css">
     <?php
-    if (strpos($_SERVER['REQUEST_URI'], 'register.php')) {
-        echo '<link rel="stylesheet" href="../assets/css/register.css">';
-    } else if (strpos($_SERVER['REQUEST_URI'], 'restaurant.php')) {
-        echo '<link rel="stylesheet" href="../assets/css/restaurant.css">';
-    } else if (strpos($_SERVER['REQUEST_URI'], 'index.php')) {
-        echo '<link rel="stylesheet" href="../assets/css/homepage.css">';
-    }
-
-    if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
-        echo "<link rel='icon' href='../../assets/img/logo.png'>";
-    } else {
-        echo "<link rel='icon' href='../assets/img/logo.png'>";
-    }
-    ?>
+    if (strpos($_SERVER['REQUEST_URI'], 'register.php')) {?>
+        <link rel="stylesheet" href="<?php echo URL . 'assets/css/register.css';?>">
+    <?php
+    } else if (strpos($_SERVER['REQUEST_URI'], 'restaurant.php')) {?>
+    <link rel="stylesheet" href="<?php echo URL . 'assets/css/restaurant.css';?>">
+    <?php
+    } else if (strpos($_SERVER['REQUEST_URI'], 'index.php')) {?>
+    <link rel="stylesheet" href="<?php echo URL . 'assets/css/homepage.css';?>">
+    <?php
+    }?>
+    <link rel='icon' href='<?php echo URL . "assets/img/logo.png";?>'>
 </head>
 <body class="body">
 <header class="header">
     <nav class="navbar">
         <div class="brand">
-            <?php
-                if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
-                    echo '<img src="../../assets/img/logo.png" alt="Logo Restify" class="logo">';
-                } else {
-                    echo '<img src="../assets/img/logo.png" alt="Logo Restify" class="logo">';
-                }
-            ?>
+            <img src="<?php echo URL . 'assets/img/logo.png';?>" alt="Logo Restify" class="logo">
             <h1 class="title">Restify</h1>
         </div>
         <ul class="elements-container">
             <li class="element">
-                <?php
-                    // Si l'URL contient "register"
-                    if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
-                        echo '<a href="../../index.php" class="link">Accueil</a>';
-                    } else {
-                        echo '<a href="../index.php" class="link">Accueil</a>';
-                    }
-                ?>
+                <a href="<?php echo URL;?>" class="link">Accueil</a>
             </li>
             <li class="element">
-                <?php
-                // Si l'URL contient "register"
-                if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
-                    echo '<a href="../restaurants.php" class="link">Commander</a>';
-                } else {
-                    echo '<a href="./restaurants.php" class="link">Commander</a>';
-                }
-                ?>
+                <a href="<?php echo URL . 'views/restaurants.php';?>" class="link">Commander</a>
             </li>
             <li class="element">
-                <?php
-                // Si l'URL contient "register"
-                if (strpos($_SERVER['REQUEST_URI'], 'register') || strpos($_SERVER['REQUEST_URI'], 'components')) {
-                    echo '<a href="../register.php" class="button-primary">Enregistrer</a>';
-                } else {
-                    echo '<a href="./register.php" class="link">Enregistrer</a>';
-                }
-                ?>
+                <a href="<?php echo URL . 'views/register-restaurant.php';?>" class="link">Enregistrer</a>
             </li>
         </ul>
     </nav>

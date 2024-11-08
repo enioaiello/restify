@@ -18,8 +18,77 @@
 .restaurant {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1vh 0;
+    padding: 1%;
+    background-color: var(--text-white);
+    border-radius: var(--radius);
+}
+
+.restaurant .image {
+    width: 100%;
+    height: 20vh;
+    border-radius: var(--radius);
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+}
+
+.restaurant .head {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
+    .name {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .category {
+        font-size: 1.25rem;
+        text-transform: capitalize;
+    }
+
+    .details {
+        text-align: right;
+    }
+
+    .status {
+        font-size: 1.25rem;
+    }
+
+    .localisation {
+        color: var(--primary);
+        text-decoration: none;
+    }
+}
+
+.restaurant .separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-dark);
+    margin: 1vh 0;
+}
+
+.restaurant .content {
+    font-size: 1rem;
+
+    * {
+        margin: 1vh 0;
+    }
+
+    .website {
+        display: inline-block;
+        color: var(--primary);
+        text-decoration: none;
+    }
 }
 
 span.pretty {

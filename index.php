@@ -25,7 +25,7 @@
                     <a href="views/restaurants.php" class="link">Commander</a>
                 </li>
                 <li class="element">
-                    <a href="./views/register/basic-information.php" class="button-primary">Enregistrer</a>
+                    <a href="views/restaurant/basic-information.php" class="button-primary">Enregistrer</a>
                 </li>
             </ul>
         </nav>
@@ -79,12 +79,12 @@
                 <div class="option">
                     <h4 class="title">Enregistrer mon restaurant</h4>
                     <p class="content">Parce que nous connaissons votre objectif, nous vous aiderons à l'atteindre !</p>
-                    <a href="./views/register.php" class="button-secondary">C'est parti !</a>
+                    <a href="views/register-restaurant.php" class="button-secondary">C'est parti !</a>
                 </div>
                 <div class="option">
                     <h4 class="title">Parcourir les restaurants</h4>
                     <p class="content">Une petite faim ? Parcourez les restaurants enregistrés et commandez !</p>
-                    <a href="./views/register.php" class="button-primary">C'est parti !</a>
+                    <a href="views/register-restaurant.php" class="button-primary">C'est parti !</a>
                 </div>
             </div>
         </div>
